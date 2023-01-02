@@ -1,0 +1,4 @@
+﻿<div hidden="@(!Running)">
+    <canvas id="ship" style="width: @(Ship.Width)px; height: @(Ship.Height)px; position:absolute; top:@(Ship.Y)px; left:@(Ship.X)px; background:url('@Ship.SpriteImage') @(Ship.SpriteSheet[Ship.SpriteIndex])"></canvas>
+    <canvas hidden="@(!Ship.Bullet.Fired)" class="bullet" style="width: @(Ship.Bullet.Width)px; height: @(Ship.Bullet.Height)px; position:absolute; top:@(Ship.Bullet.Y)px; left:@(Ship.Bullet.X)px; background:url('@Ship.Bullet.SpriteImage') @(Ship.Bullet.SpriteSheet[Ship.Bullet.SpriteIndex])"></canvas>
+</div>

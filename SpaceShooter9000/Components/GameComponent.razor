@@ -1,0 +1,8 @@
+﻿<div class="game-canvas" @onkeydown="OnKeyDown" @onkeyup="OnKeyUp" tabindex="0" @ref="gameDiv">
+    <ShipComponent Ship="_ship" @ref="_shipComponent" />
+</div>
+<div class="menu-container" hidden="@_running">
+    <div class="menu-center">
+        <button class="start-button" @onclick="StartAsync">@(_running ? "Stop" : "Start")</button>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿.game-canvas {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 600px;
+    width: 800px;
+    background: url('img/farback.gif');
+}
+
+.start-button {
+    width: 200px;
+    background: green;
+    color: white;
+    border-radius: 9px;
+    margin: 0;
+}
+
+.menu-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menu-container {
+    height: 600px;
+    position: relative;
+}

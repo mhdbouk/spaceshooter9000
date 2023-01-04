@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
+using SpaceShooter9000.Entites;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SpaceShooter9000.Components;

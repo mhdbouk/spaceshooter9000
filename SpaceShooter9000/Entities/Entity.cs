@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
 
-namespace SpaceShooter9000;
+namespace SpaceShooter9000.Entites;
 
-public abstract class Entity
+public abstract class Entity : IEntityMovement
 {
     public abstract float Width { get; init; }
     public abstract float Height { get; init; }

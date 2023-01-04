@@ -19,10 +19,12 @@
 
   <ItemGroup>
     <None Remove="Components\" />
+    <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="wwwroot\img\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />

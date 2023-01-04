@@ -3,7 +3,7 @@ using System.Numerics;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.VisualBasic;
 
-namespace SpaceShooter9000;
+namespace SpaceShooter9000.Entites;
 
 public class Ship : Entity
 {
@@ -16,7 +16,7 @@ public class Ship : Entity
     public override float Height { get; init; }
 
     public float Health { get; set; }
-    public NoobBullet Bullet { get; set; }
+    public IBullet Bullet { get; set; }
 
     public Ship()
     {
@@ -28,7 +28,7 @@ public class Ship : Entity
         Width = 64;
         Height = 29;
 
-        Bullet = new(this);
+        Bullet = new NoobBullet(this);
     }
 
     public override void TriggerKeyDown(KeyboardEventArgs e)
@@ -74,10 +74,5 @@ public class Ship : Entity
         {
             Bullet.UpdatePositions();
         }
-    }
-
-    public override string ToString()
-    {
-        return base.ToString();
     }
 }

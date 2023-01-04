@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Web;
 
-namespace SpaceShooter9000;
+namespace SpaceShooter9000.Entites;
 
 public class NoobBullet : Bullet
 {

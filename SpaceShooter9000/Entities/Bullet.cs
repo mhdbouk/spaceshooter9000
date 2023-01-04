@@ -1,6 +1,6 @@
-﻿namespace SpaceShooter9000;
+﻿namespace SpaceShooter9000.Entites;
 
-public abstract class Bullet : Entity
+public abstract class Bullet : Entity, IBullet
 {
     public bool Fired { get; set; }
     public async Task FireAsync(Ship ship)

@@ -33,37 +33,38 @@ public class Ship : Entity
 
     public override void TriggerKeyDown(KeyboardEventArgs e)
     {
-        if (e.Key == "ArrowLeft")
+        switch (e.Key)
         {
-            VelocityX = e.ShiftKey ? Constants.Velocity.TurboLeft : Constants.Velocity.Left;
-        }
-        else if (e.Key == "ArrowRight")
-        {
-            VelocityX = e.ShiftKey ? Constants.Velocity.TurboRight : Constants.Velocity.Right;
-        }
-        else if (e.Key == "ArrowUp")
-        {
-            VelocityY = e.ShiftKey ? Constants.Velocity.TurboUp : Constants.Velocity.Up;
-        }
-        else if (e.Key == "ArrowDown")
-        {
-            VelocityY = e.ShiftKey ? Constants.Velocity.TurboDown : Constants.Velocity.Down;
-        }
-        else if (e.Key == " ")
-        {
-            Bullet.FireAsync(this).ConfigureAwait(false);
+            case "ArrowLeft":
+                VelocityX = e.ShiftKey ? Constants.Velocity.TurboLeft : Constants.Velocity.Left;
+                break;
+            case "ArrowRight":
+                VelocityX = e.ShiftKey ? Constants.Velocity.TurboRight : Constants.Velocity.Right;
+                break;
+            case "ArrowUp":
+                VelocityY = e.ShiftKey ? Constants.Velocity.TurboUp : Constants.Velocity.Up;
+                break;
+            case "ArrowDown":
+                VelocityY = e.ShiftKey ? Constants.Velocity.TurboDown : Constants.Velocity.Down;
+                break;
+            case " ":
+                Bullet.FireAsync(this).ConfigureAwait(false);
+                break;
         }
     }
 
     public override void TriggerKeyUp(KeyboardEventArgs e)
     {
-        if (e.Key == "ArrowLeft" || e.Key == "ArrowRight")
+        switch (e.Key)
         {
-            VelocityX = 0;
-        }
-        else if (e.Key == "ArrowUp" || e.Key == "ArrowDown")
-        {
-            VelocityY = 0;
+            case "ArrowLeft":
+            case "ArrowRight":
+                VelocityX = 0;
+                break;
+            case "ArrowUp":
+            case "ArrowDown":
+                VelocityY = 0;
+                break;
         }
     }
 

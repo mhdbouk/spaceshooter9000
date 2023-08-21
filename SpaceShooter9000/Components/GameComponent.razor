@@ -1,4 +1,4 @@
-﻿<div class="game-canvas" @onkeydown="OnKeyDown" @onkeyup="OnKeyUp" tabindex="0" @ref="gameDiv">
+﻿<div class="game-canvas" @onkeydown="OnKeyDown" @onkeyup="OnKeyUp" tabindex="0" @ref="gameDiv" style="background-position-x: @(_backgroundPosition)px;">
     <ShipComponent Ship="_ship" @ref="_shipComponent" />
 </div>
 <div class="menu-container" hidden="@_running">

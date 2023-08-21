@@ -38,13 +38,14 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build Blazor WebAssembly
-        run: dotnet build -c Release -o ./output
+      - name: Build
+        run: dotnet build --no-restore
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: './output'
+      - name: Publish
+        run: dotnet publish --no-build -c Release -o ./publish
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: publish/wwwroot

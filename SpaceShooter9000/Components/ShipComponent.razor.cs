@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 using Microsoft.AspNetCore.Components;
+using SpaceShooter9000.Entites;
 
 namespace SpaceShooter9000.Components;
 

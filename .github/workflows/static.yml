@@ -38,11 +38,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore
-
-      - name: Publish
-        run: dotnet publish --no-build -c Release -o ./publish
+      - name: Build & publish
+        run: dotnet build --no-restore -c Release -o ./publish
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
